@@ -1,0 +1,99 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sea_beak.swim": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"root": {
+					"rotation": ["Math.sin((query.anim_time - 0.25) * 180) * 2 ", "Math.cos((query.anim_time - 0.0) * 360) * 6", 0],
+					"position": [0, "Math.sin((query.anim_time - 0.0) * 360) * 0.3", 0]
+				},
+				"head": {
+					"rotation": [0, "Math.cos((query.anim_time + 0.23) * 360) * 4", 0]
+				},
+				"jaw": {
+					"rotation": ["15 + Math.sin((query.anim_time + 0.23) * 360) * 6", 0, 0]
+				},
+				"tail": {
+					"rotation": [0, "Math.cos((query.anim_time - 0.2) * 360) * 8", 0]
+				},
+				"leftLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.5) * 360) * 13"]
+				},
+				"leftArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.0) * 360) * 13"]
+				},
+				"rightLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.5) * 360) * -13"]
+				},
+				"rightArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.0) * 360) * -13"]
+				}
+			}
+		},
+		"animation.sea_beak.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"root": {
+					"rotation": ["Math.sin((query.anim_time - 0.25) * 180) * 2 ", 0, 0],
+					"position": [0, "Math.cos((query.anim_time - 0.25) * 180) * 0.6", 0]
+				},
+				"head": {
+					"rotation": [0, 0, 0]
+				},
+				"jaw": {
+					"rotation": ["15 + Math.sin((query.anim_time + 0.23) * 180) * 6", 0, 0]
+				},
+				"tail": {
+					"rotation": ["Math.cos((query.anim_time - 0.05) * 180) * -5", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.5) * 360) * 13"]
+				},
+				"leftArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.0) * 360) * 13"]
+				},
+				"rightLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.5) * 360) * -13"]
+				},
+				"rightArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.0) * 360) * -13"]
+				}
+			}
+		},
+		"animation.sea_beak.eat": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"root": {
+					"rotation": ["Math.cos((query.anim_time - 0.05) * 180) * -1", 0, 0],
+					"position": [0, "Math.sin((query.anim_time - 0.0) * 360) * 0.3", 0]
+				},
+				"head": {
+					"rotation": ["Math.sin((query.anim_time - 0.05) * 180) * 7", 0, 0]
+				},
+				"jaw": {
+					"rotation": ["27.5 + Math.sin((query.anim_time + 0.23) * 720) * 12", 0, 0]
+				},
+				"tail": {
+					"rotation": ["-5+Math.sin((query.anim_time - 0.05) * 180) * 2", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.5) * 360) * 13"]
+				},
+				"leftArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * -13", "-52.5+Math.cos((query.anim_time - 0.0) * 360) * 13"]
+				},
+				"rightLeg": {
+					"rotation": ["Math.sin((query.anim_time - 0.5) * 360) * 13", "Math.sin((query.anim_time - 0.8) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.5) * 360) * -13"]
+				},
+				"rightArm": {
+					"rotation": ["Math.sin((query.anim_time - 0.0) * 360) * 13", "Math.sin((query.anim_time - 0.3) * 360) * 13", "52.5+Math.cos((query.anim_time - 0.0) * 360) * -13"]
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
