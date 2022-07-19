@@ -2,6 +2,7 @@ package coda.thecreaturesever.registry;
 
 import coda.thecreaturesever.TheCreaturesEver;
 import coda.thecreaturesever.client.render.SimpleGeoRenderer;
+import coda.thecreaturesever.common.entities.DandyDeerEntity;
 import coda.thecreaturesever.common.entities.SeaBeakEntity;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.EntityType;
@@ -22,13 +23,21 @@ public class TCEEntities {
                     .updateInterval(1)
                     .build("sea_beak"));
 
+    public static final RegistryObject<EntityType<DandyDeerEntity>> DANDY_DEER =
+            ENTITIES.register("dandy_deer", () -> EntityType.Builder.of(DandyDeerEntity::new, MobCategory.CREATURE)
+                    .sized(0.55F, 1.5F)
+                    .setTrackingRange(16)
+                    .updateInterval(1)
+                    .build("dandy_deer"));
 
     public static void registerAttributes(final EntityAttributeCreationEvent e) {
         e.put(TCEEntities.SEA_BEAK.get(), SeaBeakEntity.createAttributes().build());
+        e.put(TCEEntities.DANDY_DEER.get(), DandyDeerEntity.createAttributes().build());
     }
     
     public static void registerRenderers(final FMLClientSetupEvent e) {
         EntityRenderers.register(TCEEntities.SEA_BEAK.get(), mgr -> new SimpleGeoRenderer<>(mgr, TheCreaturesEver.MOD_ID, "sea_beak"));
+        EntityRenderers.register(TCEEntities.DANDY_DEER.get(), mgr -> new SimpleGeoRenderer<>(mgr, TheCreaturesEver.MOD_ID, "dandy_deer"));
     }
     
 }

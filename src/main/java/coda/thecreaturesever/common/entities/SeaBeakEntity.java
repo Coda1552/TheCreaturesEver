@@ -48,9 +48,6 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 public class SeaBeakEntity extends Animal implements IAnimatable, IAnimationTickable {
-    public static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(SeaBeakEntity.class, EntityDataSerializers.INT);
-    private static final EntityDataAccessor<Boolean> FROM_BUCKET = SynchedEntityData.defineId(SeaBeakEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final int MAX_VARIANTS = 303;
     private final AnimationFactory factory = new AnimationFactory(this);
 
     public SeaBeakEntity(EntityType<? extends Animal> type, Level worldIn) {
