@@ -3,6 +3,7 @@ package coda.thecreaturesever.registry;
 import coda.thecreaturesever.TheCreaturesEver;
 import coda.thecreaturesever.common.items.AcornCapArmorItem;
 import coda.thecreaturesever.common.items.BearCloakArmorItem;
+import coda.thecreaturesever.common.items.CoffeeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -32,5 +33,5 @@ public class TCEItems {
     public static final RegistryObject<Item> BEAR_CLOAK = ITEMS.register("bear_cloak", () -> new BearCloakArmorItem(EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).tab(TAB)));
 
     public static final RegistryObject<Item> COFFEE_BEAN = ITEMS.register("coffee_bean", () -> new Item(new Item.Properties().tab(TAB)));
-    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee", () -> new HoneyBottleItem(new Item.Properties().tab(TAB).stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(0.2F).effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0), 1.0F).build())));
+    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee", () -> new CoffeeItem(new Item.Properties().tab(TAB).stacksTo(1).food(new FoodProperties.Builder().nutrition(3).saturationMod(0.2F).effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0), 1.0F).build())));
 }
