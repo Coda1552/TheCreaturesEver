@@ -1,4 +1,10 @@
 {
+  "itemGroup.thecreaturesever": "The Creatures Ever",
+
   "entity.thecreaturesever.sea_beak": "Sea Beak",
-  "item.thecreaturesever.sea_beak_spawn_egg": "Sea Beak Spawn Egg"
+
+  "item.thecreaturesever.sea_beak_spawn_egg": "Sea Beak Spawn Egg",
+  "item.thecreaturesever.acorn_cap": "Acorn Cap",
+  "item.thecreaturesever.bear_hood": "Bear Hood",
+  "item.thecreaturesever.bear_cloak": "Bear Cloak"
 }

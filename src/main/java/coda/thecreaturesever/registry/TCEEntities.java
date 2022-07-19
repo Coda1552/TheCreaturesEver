@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class TCEEntities {
-    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, TheCreaturesEver.ID);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, TheCreaturesEver.MOD_ID);
 
     public static final RegistryObject<EntityType<SeaBeakEntity>> SEA_BEAK =
             ENTITIES.register("sea_beak", () -> EntityType.Builder.of(SeaBeakEntity::new, MobCategory.WATER_CREATURE)
@@ -28,7 +28,7 @@ public class TCEEntities {
     }
     
     public static void registerRenderers(final FMLClientSetupEvent e) {
-        EntityRenderers.register(TCEEntities.SEA_BEAK.get(), mgr -> new SimpleGeoRenderer<>(mgr, TheCreaturesEver.ID, "sea_beak"));
+        EntityRenderers.register(TCEEntities.SEA_BEAK.get(), mgr -> new SimpleGeoRenderer<>(mgr, TheCreaturesEver.MOD_ID, "sea_beak"));
     }
     
 }
