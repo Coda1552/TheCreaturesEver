@@ -1,5 +1,8 @@
 package coda.thecreaturesever.client.model;
 
+import coda.thecreaturesever.common.entities.CivetEntity;
+import coda.thecreaturesever.common.entities.DandyDeerEntity;
+import coda.thecreaturesever.registry.TCEEntities;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.Nullable;
@@ -44,7 +47,13 @@ public class SimpleGeoModel<T extends LivingEntity & IAnimatable> extends Animat
             root.setScaleX(0.5F);
             root.setScaleY(0.5F);
             root.setScaleZ(0.5F);
-            // root.setPositionY(-2F);
+
+            if (entity instanceof DandyDeerEntity) {
+                root.setPositionY(-2F);
+            }
+            if (entity instanceof CivetEntity) {
+                root.setPositionY(-5F);
+            }
         }
     }
 }

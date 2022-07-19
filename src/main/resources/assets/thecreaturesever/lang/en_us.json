@@ -3,10 +3,15 @@
 
   "entity.thecreaturesever.sea_beak": "Sea Beak",
   "entity.thecreaturesever.dandy_deer": "Dandy Deer",
+  "entity.thecreaturesever.civet": "Civet",
 
   "item.thecreaturesever.sea_beak_spawn_egg": "Sea Beak Spawn Egg",
   "item.thecreaturesever.dandy_deer_spawn_egg": "Dandy Deer Spawn Egg",
+  "item.thecreaturesever.civet_spawn_egg": "Civet Spawn Egg",
+
   "item.thecreaturesever.acorn_cap": "Acorn Cap",
   "item.thecreaturesever.bear_hood": "Bear Hood",
-  "item.thecreaturesever.bear_cloak": "Bear Cloak"
+  "item.thecreaturesever.bear_cloak": "Bear Cloak",
+  "item.thecreaturesever.coffee": "Cup of Coffee",
+  "item.thecreaturesever.coffee_bean": "Coffee Bean"
 }
