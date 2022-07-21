@@ -38,9 +38,7 @@ public class TheCreaturesEver {
 		IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
 		bus.addListener(this::setup);
-		bus.addListener(this::registerRenders);
 		bus.addListener(TCEEntities::registerAttributes);
-		bus.addListener(TCEEntities::registerRenderers);
 
 		forgeBus.addListener(this::addSpawns);
 
@@ -61,10 +59,5 @@ public class TheCreaturesEver {
 		if (event.getCategory().equals(Biome.BiomeCategory.SAVANNA)) {
 			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(TCEEntities.CIVET.get(), 1, 1, 1));
 		}
-	}
-
-	private void registerRenders(final EntityRenderersEvent.AddLayers event) {
-		GeoArmorRenderer.registerArmorRenderer(AcornCapArmorItem.class, new AcornCapArmorRenderer());
-		GeoArmorRenderer.registerArmorRenderer(BearCloakArmorItem.class, new BearCloakArmorRenderer());
 	}
 }
