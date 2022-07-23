@@ -2,8 +2,12 @@ package coda.thecreaturesever.common.items;
 
 import coda.thecreaturesever.TheCreaturesEver;
 import coda.thecreaturesever.client.model.armor.BearCapeModel;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,10 +35,11 @@ public class BearCloakArmorItem extends ArmorItem {
             @Nonnull
             @Override
             public Model getBaseArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlot armorSlot, HumanoidModel<?> defaultModel) {
+                if (BearCapeModel.INSTANCE == null) {
+                    BearCapeModel.INSTANCE = new BearCapeModel<>(new EntityRendererProvider.Context(Minecraft.getInstance().getEntityRenderDispatcher(), Minecraft.getInstance().getItemRenderer(), Minecraft.getInstance().getResourceManager(), Minecraft.getInstance().getEntityModels(), Minecraft.getInstance().font).bakeLayer(new ModelLayerLocation(new ResourceLocation(TheCreaturesEver.MOD_ID, "bear_cape"), "main")));
+                }
                 return BearCapeModel.INSTANCE;
             }
         });
     }
-
-
 }

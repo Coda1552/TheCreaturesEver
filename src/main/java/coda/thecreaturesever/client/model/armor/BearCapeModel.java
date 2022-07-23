@@ -20,33 +20,31 @@ import net.minecraft.world.entity.player.Player;
 
 // some code from BetterAnimalsPlus!
 public class BearCapeModel<T extends LivingEntity> extends HumanoidModel<T> {
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TheCreaturesEver.MOD_ID, "bear_cape_model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TheCreaturesEver.MOD_ID, "bear_cape"), "main");
 	public static BearCapeModel<LivingEntity> INSTANCE = null;
 	private float f1_r;
 	private float f2_r;
 	private float f3_r;
 	private boolean isPlayer;
 
-	public ModelPart hat;
+	public ModelPart armorHead;
 	public ModelPart armorBody;
 	public ModelPart armorRightArm;
 	public ModelPart armorLeftArm;
 
 	public BearCapeModel(ModelPart root) {
 		super(root);
-		this.hat = head.getChild("hat");
+		this.armorHead = head.getChild("armorHead");
 		this.armorBody = body.getChild("armorBody");
-		this.armorRightArm = body.getChild("hat");
-		this.armorLeftArm = body.getChild("hat");
+		this.armorRightArm = rightArm.getChild("armorRightArm");
+		this.armorLeftArm = leftArm.getChild("armorLeftArm");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = HumanoidModel.createMesh(new CubeDeformation(0F), 0F);
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition armorHead = partdefinition.getChild("head").addOrReplaceChild("armorHead", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-
-		PartDefinition hat = armorHead.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -13.0F, -5.0F, 10.0F, 13.0F, 9.0F, new CubeDeformation(0.01F))
+		PartDefinition armorHead = partdefinition.getChild("head").addOrReplaceChild("armorHead", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -13.0F, -5.0F, 10.0F, 13.0F, 9.0F, new CubeDeformation(0.01F))
 		.texOffs(64, 15).addBox(-2.0F, -6.0F, -10.0F, 4.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
 		.texOffs(0, 0).addBox(3.0F, -15.0F, 0.0F, 3.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(35, 24).addBox(-6.0F, -15.0F, 0.0F, 3.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
