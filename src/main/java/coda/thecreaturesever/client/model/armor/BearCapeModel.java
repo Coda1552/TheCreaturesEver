@@ -5,7 +5,6 @@ package coda.thecreaturesever.client.model.armor;// Made with Blockbench 4.2.5
 
 import coda.thecreaturesever.TheCreaturesEver;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexBuffer;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
@@ -16,11 +15,10 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.util.datafix.fixes.BlockEntityUUIDFix;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.client.model.pipeline.VertexBufferConsumer;
 
+// some code from BetterAnimalsPlus!
 public class BearCapeModel<T extends LivingEntity> extends HumanoidModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TheCreaturesEver.MOD_ID, "bear_cape_model"), "main");
 	public static BearCapeModel<LivingEntity> INSTANCE = null;
